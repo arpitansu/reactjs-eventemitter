@@ -37,6 +37,7 @@ function App() {
 export default App;
 ```
 
+
 ```
 // parent class or sibling class
 
@@ -59,6 +60,52 @@ export default function parent() {
     )
 
 }
+```
+
+>[!Warning] When using useState hook use subscribe inside useState otherwise it'll be called twice
+```
+import React, { useEffect } from 'react'
+const EventEmitter = require("reactjs-eventemitter")
+
+
+
+
+export default function Parent() {
+
+    useEffect(() => {
+        console.log("parent component loading...")
+
+
+        EventEmitter.subscribe('buttonClick', event => {
+
+            console.log(event)
+        
+        })
+        
+        EventEmitter.subscribe('buttonClick2', event => {
+        
+            console.log(event)
+        
+        })
+        
+        
+        EventEmitter.subscribe('buttonClick3', event => {
+        
+            console.log(event)
+        
+        })
+
+    })
+
+   
+    return (
+        <div>
+            This is parent componetn 
+        </div>
+    )
+
+}
+
 ```
 
 ```

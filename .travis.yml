@@ -12,3 +12,5 @@ jobs:
         provider: npm
         api_key: $NPM_PUBLISH_KEY
         on: deploy-npm-release
+        on:
+          branch: master

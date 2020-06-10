@@ -32,7 +32,7 @@ export default function parent() {
 
     return (
         <div>
-            This is parent componetn 
+            This is parent component 
         </div>
     )
 

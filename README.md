@@ -95,5 +95,5 @@ EventEmitter.dispatch('eventName', event);
 EventEmitter.emit('eventName', event)
 
 //subscribe the event
-EventEmitter.subscribe('buttonClick', event => { //logic here })
+EventEmitter.subscribe('eventName', event => { //logic here })
 ```

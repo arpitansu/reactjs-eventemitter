@@ -1,0 +1,10 @@
+script: echo "Running tests against $(node -v) ..."
+
+jobs:
+  include:
+    - stage: npm release
+      script: echo "Deploying to npm ..."
+      deploy:
+        provider: npm
+        api_key: $NPM_PUBLISH_KEY
+        on: deploy-npm-release

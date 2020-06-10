@@ -32,7 +32,7 @@ export default function parent() {
 
     return (
         <div>
-            This is parent componetn 
+            This is parent component 
         </div>
     )
 
@@ -62,7 +62,7 @@ export default function child() {
 
 ```
 
-Availabe Funtions.
+Available Functions.
 
 ```
 // publish the event (dispatch and emit both are same)
@@ -72,5 +72,6 @@ EventEmitter.dispatch('eventName', event);
 //for angular lovers
 EventEmitter.emit('eventName', event)
 
+//subscribe the event
 EventEmitter.subscribe('buttonClick', event => { //logic here })
 ```

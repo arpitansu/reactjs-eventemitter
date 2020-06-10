@@ -16,6 +16,28 @@ const EventEmitter = require("reactjs-eventemitter")
 Step 3: Use the module.
 
 ```
+// your app class
+
+import React from 'react';
+
+import Parent from "./parent";
+import Child from "./child";
+
+// here both parent and child are independent of each other
+
+function App() {
+  return (
+    <div className="App">
+        <Parent /> // parent or sibling component
+        <Child /> // child or sibling component
+    </div>
+  );
+}
+
+export default App;
+```
+
+```
 // parent class or sibling class
 
 import React from 'react'

@@ -62,7 +62,7 @@ export default function parent() {
 }
 ```
 
->[!Warning] When using useState hook use subscribe inside useState otherwise it'll be called twice
+>[!Warning] When using useEffect hook use subscribe inside useEffect otherwise it'll be called twice
 ```
 import React, { useEffect } from 'react'
 const EventEmitter = require("reactjs-eventemitter")
